@@ -137,11 +137,12 @@
         }
 
         // TODO - If there are no errors, use a template string to display an order summary in the order summary paragraph
-
+        orderSummaryParagraph.innerHTML = `<b>Your name:</b> ${name}<br><b>Your house number:</b> ${houseNumber}<br><b>Street:</b> ${streetName}<br><b>City:</b> ${city}<br>
+        <b>Zip:</b> ${zip}<br><b>Tree Type:</b> ${treeType}`
         
     })
 
-
+console.log(orderSummaryParagraph)
 
 </script>
 
