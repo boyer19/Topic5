@@ -2,43 +2,33 @@
 <html lang="en">
 <head>
   <title>Tree Order Form</title>
-
-  <style>
-      
-      input, select {
-          width: 100%;
-          padding: 5px;
-          margin: 5px 5px 5px 0px;
-          box-sizing: border-box;
-      }
-
-  </style>
-
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
 </head>
 <body>
-
+    
     <h1>Minnesota Tree Order Form</h1>
 
     <p>Enter information to order your tree. All fields are required.</p>
 
     <h2>Order Information</h2>
 
-    <label for="homeowner-name">Homeowner Name</label><input id="homeowner-name" name="homeowner-name">
+    <label for="homeowner-name"><b>Homeowner Name</b></label><input id="homeowner-name" name="homeowner-name" class="visually-hidden">
     <br>
-    <label for="homeowner-house-number">House Number</label><input id="homeowner-house-number" name="homeowner-house-number">
+    <label for="homeowner-house-number"><b>House Number</b></label><input id="homeowner-house-number" name="homeowner-house-number" class="visually-hidden">
     <br>
-    <label for="homeowner-street-name">Street Name</label><input id="homeowner-street-name" name="homeowner-street-name">
+    <label for="homeowner-street-name"><b>Street Name</b></label><input id="homeowner-street-name" name="homeowner-street-name" class="visually-hidden">
     <br>
-    <label for="city">City</label><input id="city" name="city"> 
+    <label for="city"><b>City</b></label><input id="city" name="city" class="visually-hidden">
     <br>
     <!-- All orders must be for Minnesota, so this input is not editable -->
-    <label for="state">State</label><input id="state" name="state" value="Minnesota" disabled> 
+    <label for="state"><b>State</b></label><input id="state" name="state" value="Minnesota" disabled class="visually-hidden">
     <br>
-    <label for="zipcode">Zip Code</label><input id="zipcode" name="zipcode">
+    <label for="zipcode"><b>Zip Code</b></label><input id="zipcode" name="zipcode" class="visually-hidden">
     <br>
 
-    <label for="tree-type">Tree Type</label>
-    <select id="tree-type">
+    <label for="tree-type"><b>Tree Type</b></label >
+    <select id="tree-type" class="visually-hidden">
         <option disabled selected value=""> Select a tree </option>  <!-- Unselectable message shown. Since this will be required, it forces the user to actually pick a tree, not just click submit for the default first option -->
         <option name="tree-type">Lilac</option>
         <option name="tree-type">Maple</option>
@@ -46,7 +36,7 @@
     </select>
     <br>
 
-    <button id="submit-order">Submit Order</button>    
+    <button id="submit-order">Submit Order</button>
 
     <h2>Order Summary</h2>
 
@@ -137,12 +127,13 @@
         }
 
         // TODO - If there are no errors, use a template string to display an order summary in the order summary paragraph
-        orderSummaryParagraph.innerHTML = `<b>Your name:</b> ${name}<br><b>Your house number:</b> ${houseNumber}<br><b>Street:</b> ${streetName}<br><b>City:</b> ${city}<br>
-        <b>Zip:</b> ${zip}<br><b>Tree Type:</b> ${treeType}`
+        orderSummaryParagraph.innerHTML = `<b>Your name:</b> <br>${name}<br><b>Your house number:</b> <br>${houseNumber}<br><b>Street:</b> <br>${streetName}<br><b>City:</b> <br>${city}<br>
+        <b>Zip:</b> <br>${zip}<br><b>Tree Type:</b> <br>${treeType}`
         
     })
 
-console.log(orderSummaryParagraph)
+//console.log(orderSummaryParagraph)
+
 
 </script>
 
